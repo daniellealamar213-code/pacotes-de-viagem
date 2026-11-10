@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CineBot | Seu Universo de Filmes</title>
+
+    <link rel="stylesheet" href="filme2.css">
+    <script src="filme3.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">🎬 Cine<span>Bot</span></a>
+        <nav>
+            <a href="#cadastro">Cadastrar filme</a>
+            <a href="#assistente">Assistente IA</a>
+            <a href="#historico">Histórico</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-content">
+                <span class="tag">SEU UNIVERSO CINEMATOGRÁFICO</span>
+                <h1>Descubra o que seus filmes favoritos dizem sobre você.</h1>
+                <p>
+                    Cadastre seus filmes, dê suas notas e deixe o CineBot
+                    analisar suas avaliações automaticamente.
+                </p>
+                <a href="#cadastro" class="btn-primary">Começar agora →</a>
+            </div>
+
+            <div class="hero-icon">
+                <div class="movie-circle">🎥</div>
+                <span class="floating-icon">⭐</span>
+                <span class="floating-icon second">🍿</span>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <span>🎞️</span>
+                <h2 id="totalFilmes">0</h2>
+                <p>Filmes cadastrados</p>
+            </div>
+
+            <div class="stat-card">
+                <span>⭐</span>
+                <h2 id="mediaNotas">0.0</h2>
+                <p>Média das notas</p>
+            </div>
+
+            <div class="stat-card">
+                <span>🏆</span>
+                <h2 id="melhorNota">0</h2>
+                <p>Melhor avaliação</p>
+            </div>
+        </section >
+
+        <section class="section" id="cadastro">
+
+            <div class="section-heading">
+                <span class="tag">NOVO CADASTRO</span>
+                <h2>Cadastre seu filme favorito</h2>
+                <p>Preencha os dados abaixo para começar a análise.</p>
+            </div>
+
+            <form id="formFilme" class="form-card">
+
+                <div class="form-group" >
+                    <label for="nomeFilme">Nome do filme</label>
+                    <input
+                        type="text"
+                        id="nomeFilme"
+                        placeholder="Ex: Interestelar"
+                        maxlength="80"
+                        required
+                    >
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="anoFilme">Ano de lançamento</label>
+                        <input
+                            type="number"
+                            id="anoFilme"
+                            placeholder="Ex: 2014"
+                            min="1888"
+                            max="2026"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notaFilme">Sua nota</label>
+                        <input
+                            type="number"
+                            id="notaFilme"
+                            placeholder="1 a 10"
+                            min="1"
+                            max="10"
+                            step="0.1"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="generoFilme">Gênero do filme</label>
+                    <select id="generoFilme" required>
+                        <option value="">Selecione um gênero</option>
+                        <option value="Ação">Ação</option>
+                        <option value="Aventura">Aventura</option>
+                        <option value="Comédia">Comédia</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Ficção científica">Ficção científica</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Animação">Animação</option>
+                        <option value="Suspense">Suspense</option>
+                        <option value="Fantasia">Fantasia</option>
+                        <option value="Documentário">Documentário</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-primary btn-full">
+                    🤖 Analisar meu filme
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="section result-section" id="resultado" hidden>
+
+            <div class="section-heading">
+                <span class="tag">SEU RESULTADO</span>
+                <h2>Ficha do filme</h2>
+            </div>
+
+            <div class="result-card">
+
+                <div class="result-top">
+                    <span class="movie-poster">🎬</span>
+
+                    <div>
+                        <h3 id="resultadoNome"></h3>
+                        <p id="resultadoGenero"></p>
+                        <p id="resultadoAno"></p>
+                    </div>
+                </div>
+
+                <div class="rating-box">
+                    <span>Sua avaliação</span>
+                    <strong id="resultadoNota"></strong>
+                    <div id="estrelas"></div>
+                </div>
+
+                <div class="movie-details">
+                    <p id="resultadoIdade"></p>
+                    <p id="resultadoClassificacao"></p>
+                </div>
+
+                <div class="robot-box" id="assistente">
+                    <div class="robot-header">
+                        <span class="robot-avatar">🤖</span>
+                        <div>
+                            <h3>CineBot</h3>
+                            <span class="online">● Assistente automático</span>
+                        </div>
+                    </div>
+
+                    <h4>Minha análise sobre seu filme:</h4>
+                    <p id="comentarioBot"></p>
+
+                    <div class="robot-tip">
+                        <strong>💡 Recomendação do CineBot</strong>
+                        <p id="recomendacaoBot"></p>
+                    </div>
+
+                    <small>
+                        Análise gerada automaticamente com base nos dados
+                        cadastrados. Não representa uma pesquisa externa.
+                    </small>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section" id="historico">
+
+            <div class="section-heading">
+                <span class="tag">SUA COLEÇÃO</span>
+                <h2>Histórico de filmes</h2>
+                <p>Confira todos os filmes que você já cadastrou.</p>
+            </div>
+
+            <div id="listaFilmes" class="history-list">
+                <p class="empty-message">
+                    🍿 Nenhum filme cadastrado ainda.
+                </p>
+            </div>
+
+            <button type="button" id="limparHistorico" class="btn-danger">
+                🗑️ Limpar histórico
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <h2>🎬 CineBot</h2>
+        <p>Seu assistente pessoal do mundo do cinema.</p>
+        <p>Projeto desenvolvido para estudos de HTML, CSS e JavaScript.</p>
+        <small>© 2026 CineBot - Todos os direitos reservados.</small>
+    </footer>
+
+</body>
+</html>

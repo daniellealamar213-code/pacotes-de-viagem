@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="container py-5">
+        <h2 class="text-center mb-2">Loja do Viajante</h2>
+        <p class="text-center text-muted mb-5">Acessórios para deixar sua viagem mais tranquila.</p>
+        <div id="filtros" class="d-flex flex-wrap align-items-center gap-3 mb-4">
+            <div class="btn-group" role="group" aria-label="Filtrar por preço">
+                <button type="button" class="btn btn-outline-primary active" data-filtro="todos">Todos</button>
+                <button type="button" class="btn btn-outline-primary" data-filtro="ate100">Até R$ 100</button>
+                <button type="button" class="btn btn-outline-primary" data-filtro="acima100">Acima de R$ 100</button>
+            </div>
+            <span id="contador" class="text-muted"></span>
+        </div>
+        <div id="vitrine" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 mb-5"></div>
+        <h3 id="titulo-lista" class="h5">Lista de preços</h3>
+        <ul id="lista-produtos" class="list-group mb-4"></ul>
+
+    </main>
+    <script src="js/loja.js"></script>
+    <script src="js/tema.js"></script>
+</body>
+
+</html>

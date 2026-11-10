@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <header class="container-fluid bg-primary text-white text-center p-4">
+        <h1>Jornada Viagens</h1>
+        <p>Blog</p>
+    </header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Menu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pacotes.html">Pacotes de Viagens</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contato">Contato</a>
+                    </li>
+                    <li><a class="dropdown-item" href="contato.html">contato</a></li>
+                    <li><a class="dropdown-item" href="exemplo_form.html">Exemplo</a></li>
+                    <li><a class="dropdown-item" href="form_endereco.html">Endereço</a></li>
+                    <li><a class="dropdown-item" href="orcamento.html">orgamento</a></li>
+                </ul>
+                <button type="button" id="btn-tema" class="btn btn-outline-secondary ms-auto">
+                    <i class="bi bi-moon-stars-fill"></i> Tema escuro
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-fill container my-4">
+        <nav aria -label="breadcrumb" class="bg-light py-2">
+            <ol class="breadcrumb container mb-0">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Blog</li>
+            </ol>
+            <section id="alert">
+                <article class="alert alert-primary" role="alert">
+                    Aqui voce encontra Informaçoes variadas sobre viajens, locais, pontos de
+                    encontro, dicas e muito mais. Fique a vontade para explorar e descobrir
+                    novas experiencias de viagem!
+                </article>
+            </section>
+            <section id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="img/japao.jpg" class="d-block w-100 object-fit-cover" style="height: 400px;"
+                            alt="uma comércio de rua no Japão com lanternas vermelhas penduradas e pessoas caminhando.">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="img/paraiba.jpg" class="d-block w-100 object-fit-cover" style="height: 400px;"
+                            alt="uma praia com coqueiros e um mar azul cristalino, com algumas pessoas caminhando na areia.">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/sanandreas.jpg" class="d-block w-100 object-fit-cover" style="height: 400px;"
+                            alt="um rio com águas cristalinas cercado por montanhas e vegetação exuberante, com algumas pessoas nadando e praticando esportes aquáticos.">
+                    </div>
+                </div>
+                <section id="destino-surpresa" class="card my-4 shadow-sm">
+                    <div class="row g-0">
+                        <div class="col-md-5">
+                            <img id="foto-surpresa" src="img/japao.jpg"
+                                class="img-fluid h-100 object-fit-cover rounded-start"
+                                alt="Rua comercial no Japão com lanternas vermelhas.">
+                        </div>
+
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h2 class="card-title h4">Destino surpresa</h2>
+                                <p id="texto-surpresa" class="card-text">
+                                    Clique no botão e descubra uma sugestão de viagem!
+                                </p>
+                                <button type="button" id="btn-surpresa" class="btn btn-warning">
+                                    Sortear destino
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true">
+                        <span class="visually-hidden">Previous
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true">
+                        <span class="visually-hidden">Next
+                </button>
+            </section>
+
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum a inventore
+                perspiciatis harum. Corporis nam laborum, suscipit debitis autem consequuntur voluptas impedit ducimus
+                quibusdam
+                dolore nostrum veritatis blanditiis, itaque nihil.
+                Ea odio quasi tempore. Consectetur vitae soluta cumque, sit commodi eius libero id eligendi dolore.
+                Ipsam harum
+                sint soluta a consectetur, accusamus pariatur incidunt nisi porro magnam ducimus autem amet?
+                Et quae ipsum, animi inventore officia dicta optio placeat doloribus dolor explicabo error eum
+                blanditiis nulla
+                fugit sapiente ipsa, enim a distinctio porro odio sint harum facilis! Veniam, eveniet temporibus.
+                Sunt perferendis, libero eligendi natus similique doloremque dolore recusandae rem nihil quasi
+                consequatur dolor
+                fugit hic voluptatem, eaque quam unde? Provident ipsum itaque totam aliquam? Exercitationem ea alias
+                maxime
+                aspernatur!
+                Minus, animi quaerat, autem excepturi sunt voluptates incidunt cum doloremque quibusdam doloribus
+                repellendus
+                repellat aperiam in itaque ratione cupiditate explicabo ipsum provident debitis neque! Dolore similique
+                voluptas
+                dolor sequi explicabo.
+            </p>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-copy">
+                <p>&copy; 2026 Jornada Viagens. Todos os direitos reservados</p>
+            </div>
+            <address id="contato" class="footer-contato">
+                <h2>Contato</h2>
+                <p>Email: contato@jornadaviagens.com.br</p>
+                <p>Tel/WhatsApp: (21)91234-1234</p>
+            </address>
+            <nav class="footer-redes" aria-label="Redes Sociais">
+                <a href="https://pt-br.facebook.com/" target="_blank" aria-label="facebook">
+                    <i class="bi bi-facebook"></i>
+                    <a href="https://www.instagram.com/" target="_blank" aria-label="instagram">
+                        <i class="bi bi-instagram"></i>
+                        <a href="https://x.com/" target="_blank" aria-label="x"> <i class="bi bi-twitter"></i>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/tema.js"></script>
+</body>
+
+</html>
